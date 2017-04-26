@@ -1,5 +1,5 @@
 <?php
-class ModelApiBaeli extends Model {
+class ModelApiSop extends Model {
     public function __construct($object)
     {
         parent::__construct($object);
@@ -87,9 +87,9 @@ class ModelApiBaeli extends Model {
     }
     public function validateLogin()
     {
-        if(isset($this->request->post['username'])and $this->request->post['username']=='baeli_api_user'){
+        if(isset($this->request->post['username'])and $this->request->post['username']=='sop_api_user'){
             if(isset($this->request->post['password'])and $this->request->post['password']=='hereputalongstriingasapassword'){
-                $this->session->data['server_id']='baeli';
+                $this->session->data['server_id']='sop';
                 return true;
             }
         }
